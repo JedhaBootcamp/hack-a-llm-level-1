@@ -12,7 +12,9 @@ cd ./hack-a-llm-level-1
 docker build . -t jedha/hack-a-llm-level-1
 docker run -d \
     --name hack-a-llm-level-1 \
-    -p 80:80
+    -p 80:80 \
+    -e OPENAI_API_KEY=YOUR_API_KEY \
+    -e OPENAI_MODEL=YOUR_MODEL \
     --restart=always \
     jedha/hack-a-llm-level-1
 ```
@@ -22,7 +24,9 @@ docker run -d \
 ```bash
 docker run -d \
     --name hack-a-llm-level-1 \
-    -p 80:80
+    -p 80:80 \
+    -e OPENAI_API_KEY=YOUR_API_KEY \
+    -e OPENAI_MODEL=YOUR_MODEL \
     --restart=always \
     jedha/hack-a-llm-level-1
 ```
