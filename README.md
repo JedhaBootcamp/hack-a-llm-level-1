@@ -15,6 +15,7 @@ docker run -d \
     -p 80:80 \
     -e OPENAI_API_KEY=YOUR_API_KEY \
     -e OPENAI_MODEL=YOUR_MODEL \
+    -e PORT=80 \
     --restart=always \
     jedha/hack-a-llm-level-1
 ```
