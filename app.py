@@ -52,7 +52,7 @@ if check_password():
     
     # ---------- LangChain setup (no deprecated memory) ---------- #
     OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-    OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini") #[cite: 2]
+    OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-6-luna") #[cite: 2]
 
     if not OPENAI_API_KEY:
         raise RuntimeError("Please set the OPENAI_API_KEY environment variable.") #[cite: 2]
@@ -67,7 +67,7 @@ if check_password():
     llm = ChatOpenAI(
         model=OPENAI_MODEL,
         api_key=OPENAI_API_KEY,
-        temperature=0.7,
+        reasoning_effort="none",  # gpt-6-luna is a reasoning model: no temperature allowed
         max_tokens=1000,
         streaming=True,  # IMPORTANT for .stream()
     ) #[cite: 2]
