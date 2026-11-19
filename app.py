@@ -3,7 +3,11 @@ import streamlit as st
 
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from prompts import SYSTEM_PROMPT #
+# On Hugging Face, the system prompt (which contains the flags) is a Space secret,
+# so students cannot read it in the "Files" tab. Locally, it comes from prompts.py.
+SYSTEM_PROMPT = os.environ.get("SYSTEM_PROMPT")
+if not SYSTEM_PROMPT:
+    from prompts import SYSTEM_PROMPT
 
 # ---------- Streamlit config ---------- #
 st.set_page_config(
