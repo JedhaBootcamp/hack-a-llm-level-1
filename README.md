@@ -14,7 +14,7 @@ docker run -d \
     --name hack-a-llm-level-1 \
     -p 80:80 \
     -e OPENAI_API_KEY=YOUR_API_KEY \
-    -e OPENAI_MODEL=YOUR_MODEL \
+    -e OPENAI_MODEL=gpt-6-luna \
     -e PORT=80 \
     --restart=always \
     jedha/hack-a-llm-level-1
@@ -27,7 +27,7 @@ docker run -d \
     --name hack-a-llm-level-1 \
     -p 80:80 \
     -e OPENAI_API_KEY=YOUR_API_KEY \
-    -e OPENAI_MODEL=YOUR_MODEL \
+    -e OPENAI_MODEL=gpt-6-luna \
     --restart=always \
     jedha/hack-a-llm-level-1
 ```
